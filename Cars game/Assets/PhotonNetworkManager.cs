@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PhotonNetworkManager : Photon.MonoBehaviour {
 
@@ -23,6 +21,7 @@ public class PhotonNetworkManager : Photon.MonoBehaviour {
             IsOpen = true,
             IsVisible = true
         };
+
         PhotonNetwork.JoinOrCreateRoom("nan", roomOptions, TypedLobby.Default);
     }
 
@@ -40,6 +39,6 @@ public class PhotonNetworkManager : Photon.MonoBehaviour {
     void OnJoinedRoom()
     {
         Debug.Log("Joined nun" + PhotonNetwork.room.Name);
-        PhotonNetwork.LoadLevel("Mission02");
+        PhotonNetwork.LoadLevel("Mission01");
     }
 }

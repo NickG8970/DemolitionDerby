@@ -7,7 +7,7 @@ public class MenuMaster : MonoBehaviour
 
     public void Play()
     {
-        sceneFader.FadeTo("Mission01");
+        sceneFader.FadeTo("MissionSelect");
     }
 
     public void Options()

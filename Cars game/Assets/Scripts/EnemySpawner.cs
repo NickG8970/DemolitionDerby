@@ -1,7 +1,5 @@
-﻿using System.Collections;
+﻿using UnityEngine;
 using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -26,10 +24,15 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < spawnPoints.Count; i++)
         {
             Transform sp = spawnPoints[i];
+            Debug.Log(sp);
             int enemyPrefabIndex = prng.Next(0, enemyCars.Count);
+            Debug.Log(enemyPrefabIndex);
             EnemyType enemyToInstantiate = enemyCars[enemyPrefabIndex];
+            Debug.Log(enemyToInstantiate.prefab);
             GameObject enemyGO = Instantiate(enemyToInstantiate.prefab, new Vector3(sp.position.x, enemyToInstantiate.prefab.transform.position.y, sp.position.z), enemyToInstantiate.prefab.transform.rotation);
+            Debug.Log(enemyGO);
             Enemy enemy = enemyGO.GetComponent<Enemy>();
+            Debug.Log(enemy);
             enemy.enemyType.type = enemyToInstantiate.type;
 
             GameMaster.instance.enemiesAlive++;
