@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 962f8ba9f4fc135459c56649191de0c0
+timeCreated: 1507577130
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: INFECTED
+  fontNames:
+  - INFECTED
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
