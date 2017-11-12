@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PhotonNetworkManager : Photon.MonoBehaviour {
 
@@ -10,6 +11,15 @@ public class PhotonNetworkManager : Photon.MonoBehaviour {
 	public void Connect()
     {
         PhotonNetwork.ConnectUsingSettings("1.0.0");
+        SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+    }
+
+    private void SceneManager_sceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        if (scene.name == "Multiplayer")
+        {
+            PhotonNetwork.Instantiate("PlayerCar", new Vector3(0, 10, 0), Quaternion.identity, 0);
+        }
     }
 
     public void PlayOnline()
@@ -39,6 +49,6 @@ public class PhotonNetworkManager : Photon.MonoBehaviour {
     void OnJoinedRoom()
     {
         Debug.Log("Joined nun" + PhotonNetwork.room.Name);
-        PhotonNetwork.LoadLevel("Mission01");
+        PhotonNetwork.LoadLevel("Multiplayer");
     }
 }
