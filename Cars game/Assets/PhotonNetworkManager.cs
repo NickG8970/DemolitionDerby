@@ -5,7 +5,7 @@ public class PhotonNetworkManager : Photon.MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Connect();
+        
 	}
 	
 	public void Connect()
@@ -24,15 +24,8 @@ public class PhotonNetworkManager : Photon.MonoBehaviour {
 
     public void PlayOnline()
     {
-        RoomOptions roomOptions = new RoomOptions()
-        {
-            MaxPlayers = 10,
-            PublishUserId = true,
-            IsOpen = true,
-            IsVisible = true
-        };
-
-        PhotonNetwork.JoinOrCreateRoom("nan", roomOptions, TypedLobby.Default);
+        Connect();
+        
     }
 
     void OnConnectedToMaster()
@@ -44,6 +37,15 @@ public class PhotonNetworkManager : Photon.MonoBehaviour {
     void OnJoinedLobby()
     {
         Debug.Log("Joined nan!");
+        RoomOptions roomOptions = new RoomOptions()
+        {
+            MaxPlayers = 10,
+            PublishUserId = true,
+            IsOpen = true,
+            IsVisible = true
+        };
+
+        PhotonNetwork.JoinOrCreateRoom("nan", roomOptions, TypedLobby.Default);
     }
 
     void OnJoinedRoom()

@@ -7,6 +7,7 @@ public class MenuMaster : MonoBehaviour
 
     public void Play()
     {
+        PhotonNetwork.offlineMode = true;
         sceneFader.FadeTo("MissionSelect");
     }
 
