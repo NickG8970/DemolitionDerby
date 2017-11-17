@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PhotonNetworkManager : Photon.MonoBehaviour {
@@ -30,13 +30,13 @@ public class PhotonNetworkManager : Photon.MonoBehaviour {
 
     void OnConnectedToMaster()
     {
-        Debug.Log("Connected to my nan");
+        Debug.Log("Connected to my server");
         PhotonNetwork.JoinLobby(TypedLobby.Default);
     }
 
     void OnJoinedLobby()
     {
-        Debug.Log("Joined nan!");
+        Debug.Log("Joined server!");
         RoomOptions roomOptions = new RoomOptions()
         {
             MaxPlayers = 10,
@@ -45,12 +45,12 @@ public class PhotonNetworkManager : Photon.MonoBehaviour {
             IsVisible = true
         };
 
-        PhotonNetwork.JoinOrCreateRoom("nan", roomOptions, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom("server", roomOptions, TypedLobby.Default);
     }
 
     void OnJoinedRoom()
     {
-        Debug.Log("Joined nun" + PhotonNetwork.room.Name);
+        Debug.Log("Joined game" + PhotonNetwork.room.Name);
         PhotonNetwork.LoadLevel("Multiplayer");
     }
 }
