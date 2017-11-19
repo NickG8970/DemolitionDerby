@@ -1,22 +1,23 @@
 ﻿using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
-
+public class PlayerMovement : MonoBehaviour
+{
     public float movementSpeed = 5f;
     public float turnDamping = 2f;
+    public float speedBoostMultiplier = 1.5f;
 
     private Camera playerCam;
     private Player player;
     private bool canPlayAudio = true;
 
-    // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         playerCam = GetComponentInChildren<Camera>();
         player = GetComponent<Player>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void Update ()
+    {
         if (player.isDead) return;
 
         MovePlayer();
@@ -41,20 +42,27 @@ public class PlayerMovement : MonoBehaviour {
     {
         var horizontal = Input.GetAxis("Horizontal") * 0.5f; // A + D keys
         var vertical = Input.GetAxis("Vertical"); // W + S keys
-        transform.Translate(new Vector3(horizontal, 0f, vertical) * movementSpeed * Time.deltaTime);
+        Vector3 movement = new Vector3(horizontal, 0f, vertical) * movementSpeed * Time.deltaTime;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            movement *= speedBoostMultiplier;
+        }
+
+        transform.Translate(movement);
 
         if (horizontal != 0 || vertical != 0)
         {
             if (AudioManager.instance.CheckIsPlaying("JeepDriving")) return;
+
             AudioManager.instance.StopSound("JeepIdle");
             AudioManager.instance.PlaySound("JeepDriving");
         }
         else
         {
             if (AudioManager.instance.CheckIsPlaying("JeepIdle")) return;
+
             AudioManager.instance.StopSound("JeepDriving");
             AudioManager.instance.PlaySound("JeepIdle");
-        }
-        
+        }   
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,7 @@ public class GameMaster : MonoBehaviour
     [HideInInspector] public int enemiesAlive;
 
     public GameObject gameOverPanel; // Reference to the Game Over panel.
+    public GameObject missionCompletePanel; // Reference to the Mission Complete panel.
     public TextMeshProUGUI enemiesKilledText; // Reference to the Enemies Killed text.
     public GameObject explosionEffectPrefab; // Reference to the explosion prefab.
     public CameraFollow camFollow; // Reference to the CameraFollow component on the main camera.
@@ -33,7 +35,40 @@ public class GameMaster : MonoBehaviour
         player = FindObjectOfType<Player>().gameObject;
     }
 
-    public void FinishGame() // Can be called through the public static instance when the game is over.
+    void Update()
+    {
+        if (enemiesAlive == 0)
+        {
+            FinishGame();
+        }
+    }
+
+    void FinishGame()
+    {
+        StartCoroutine(GameFinished());
+    }
+
+    IEnumerator GameFinished() // Using a coroutine allows me to wait for specfic amounts of seconds before running code.
+    {
+        yield return new WaitForSeconds(camFollow.cinematicDampening * 5); // Wait until the camera has started moving.
+        Vector3 playerPos = player.transform.position; // Grab the player's position.
+
+        GameObject explosionEffect = Instantiate(explosionEffectPrefab, new Vector3(playerPos.x, playerPos.y + 2, playerPos.z), explosionEffectPrefab.transform.rotation);
+        ParticleSystem particleSystem = explosionEffect.GetComponent<ParticleSystem>();
+        float explosionDuration = particleSystem.main.duration;
+
+        Time.timeScale = 0.45f; // Slow the time down to just below half speed.
+
+        Destroy(explosionEffect, explosionDuration);
+
+        yield return new WaitForSeconds(explosionDuration); // Wait for the explosion to finish.
+
+        Time.timeScale = 0; // Freeze time.
+        gameOverPanel.SetActive(true); // Show the Game Over panel.
+        enemiesKilledText.text = enemiesKilled.ToString(); // Set the enemies killed text to the amount of enemies you've killed.
+    }
+
+    public void GameOver() // Can be called through the public static instance when the game is over.
     {
         StartCoroutine(GameOverAnimations());
     }

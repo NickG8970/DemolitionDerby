@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
-public class Player : MonoBehaviour {
-
+public class Player : MonoBehaviour
+{
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float shootCooldownTime = 0.3f;
@@ -15,15 +13,15 @@ public class Player : MonoBehaviour {
     private float health;
     [HideInInspector] public bool isDead = false;
 
-    // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         isDead = false;
         canFire = true;
         health = startHP;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         if (isDead) return;
 
         if (Input.GetMouseButton(0) && canFire)
@@ -54,7 +52,7 @@ public class Player : MonoBehaviour {
         if (health <= 0)
         {
             HidePlayer();
-            GameMaster.instance.FinishGame();
+            GameMaster.instance.GameOver();
         }
     }
 
