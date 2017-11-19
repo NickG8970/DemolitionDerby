@@ -1,19 +1,34 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement")]
     public float movementSpeed = 5f;
     public float turnDamping = 2f;
-    public float speedBoostMultiplier = 1.5f;
 
-    private Camera playerCam;
+    [Header("Stamina")]
+    public float baseStamina = 100f;
+    public float staminaLossPerSecond = 27.5f;
+    public float staminaGainPerSecond = 17.5f;
+    public float staminaDelayBeforeRecharge = 1.5f;
+    public float speedBoostMultiplier = 1.5f;
+    public Image staminaBar;
+
+    [Space]
+
+    public Camera playerCam;
+
     private Player player;
     private bool canPlayAudio = true;
+    private float stamina;
+    private float staminaDelay;
 
     void Start ()
     {
-        playerCam = GetComponentInChildren<Camera>();
         player = GetComponent<Player>();
+        stamina = baseStamina;
+        staminaDelay = 0;
 	}
 
 	void Update ()
@@ -43,10 +58,30 @@ public class PlayerMovement : MonoBehaviour
         var horizontal = Input.GetAxis("Horizontal") * 0.5f; // A + D keys
         var vertical = Input.GetAxis("Vertical"); // W + S keys
         Vector3 movement = new Vector3(horizontal, 0f, vertical) * movementSpeed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) &&
+            stamina > 0
+            )
         {
             movement *= speedBoostMultiplier;
+            staminaDelay = staminaDelayBeforeRecharge;
+            stamina -= Time.deltaTime * staminaLossPerSecond;
         }
+        else
+        {
+            if (staminaDelay > 0)
+            {
+                staminaDelay -= Time.deltaTime * staminaDelayBeforeRecharge;
+            }
+            else
+            {
+                if (stamina < baseStamina)
+                {
+                    stamina += Time.deltaTime * staminaGainPerSecond;
+                }
+            }
+        }
+
+        staminaBar.fillAmount = (stamina / baseStamina);
 
         transform.Translate(movement);
 

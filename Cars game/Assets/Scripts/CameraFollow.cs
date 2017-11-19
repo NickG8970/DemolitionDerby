@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
-        player = transform.parent.GetComponent<Player>();
+        player = FindObjectOfType<Player>();
     }
 
     void Update()

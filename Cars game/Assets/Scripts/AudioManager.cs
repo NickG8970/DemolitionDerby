@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
+using System.Collections;
 
 [System.Serializable]
 public class Sound
@@ -114,5 +114,13 @@ public class AudioManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void StopAllSounds()
+    {
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            sounds[i].StopAudio();
+        }
     }
 }

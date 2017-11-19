@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             HidePlayer();
+            isDead = true;
             GameMaster.instance.GameOver();
         }
     }
