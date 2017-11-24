@@ -15,8 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Mission01.unity
     guid: 1c4ce383c13fa494fb9cef30ffa3debb
   - enabled: 1
-    path: Assets/Scenes/Mission02.unity
-    guid: 2dc7de0157d682c42967be8738eecdb3
-  - enabled: 1
     path: Assets/Scenes/Multiplayer.unity
     guid: f62851fe181a7c34b9b456146df857f6
+  - enabled: 1
+    path: Assets/Scenes/Mission03.unity
+    guid: 90859c616a4d03540a2efdf2c68f23cb
+  - enabled: 1
+    path: Assets/Scenes/Mission02.unity
+    guid: f2e2a1368a74eab4789b591f79fb335c
