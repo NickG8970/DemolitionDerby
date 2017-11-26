@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameMaster : MonoBehaviour
 {
     public static GameMaster instance; // A public reference to itself that can be accessed without a reference (because it's static)
-    public int enemiesKilled; // The total number of enemies you have killed (can also be accessed without a reference)
+    [HideInInspector] public int enemiesKilled; // The total number of enemies you have killed (can also be accessed without a reference)
     [HideInInspector] public int enemiesAlive;
 
     public GameObject gameOverPanel; // Reference to the Game Over panel.

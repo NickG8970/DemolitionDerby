@@ -118,9 +118,9 @@ public class AudioManager : MonoBehaviour
 
     public void StopAllSounds()
     {
-        for (int i = 0; i < sounds.Length; i++)
-        {
-            sounds[i].StopAudio();
-        }
+	foreach (Transform child in transform)
+	{
+		Destroy(child.gameObject);
+	}
     }
 }
