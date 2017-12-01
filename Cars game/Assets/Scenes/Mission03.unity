@@ -7081,7 +7081,7 @@ MonoBehaviour:
   explosionEffectPrefab: {fileID: 1115786207450146, guid: a48ad18e51caea74a9e32b720c7cf3ca,
     type: 2}
   camFollow: {fileID: 76096448}
-  currentMission: 1
+  currentMission: 3
 --- !u!114 &261793928
 MonoBehaviour:
   m_ObjectHideFlags: 0
