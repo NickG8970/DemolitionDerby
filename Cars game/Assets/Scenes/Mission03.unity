@@ -5419,6 +5419,7 @@ GameObject:
   - component: {fileID: 205673550}
   - component: {fileID: 205673552}
   - component: {fileID: 205673551}
+  - component: {fileID: 205673553}
   m_Layer: 9
   m_Name: FenceSideRight (3)
   m_TagString: Wall
@@ -5482,6 +5483,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205673549}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &205673553
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 205673549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &210504074
 Prefab:
@@ -11126,6 +11141,7 @@ GameObject:
   - component: {fileID: 421949547}
   - component: {fileID: 421949549}
   - component: {fileID: 421949548}
+  - component: {fileID: 421949550}
   m_Layer: 9
   m_Name: FenceSideRight (7)
   m_TagString: Wall
@@ -11189,6 +11205,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 421949546}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &421949550
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421949546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &424335193
 Prefab:
@@ -17798,6 +17828,7 @@ GameObject:
   - component: {fileID: 642631119}
   - component: {fileID: 642631121}
   - component: {fileID: 642631120}
+  - component: {fileID: 642631122}
   m_Layer: 9
   m_Name: FenceSideRight (4)
   m_TagString: Wall
@@ -17861,6 +17892,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 642631118}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &642631122
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 642631118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &643736726
 Prefab:
@@ -21610,6 +21655,7 @@ GameObject:
   - component: {fileID: 750557079}
   - component: {fileID: 750557081}
   - component: {fileID: 750557080}
+  - component: {fileID: 750557082}
   m_Layer: 9
   m_Name: FenceSideRight (5)
   m_TagString: Wall
@@ -21673,6 +21719,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 750557078}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &750557082
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 750557078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &750972187
 Prefab:
@@ -24836,6 +24896,7 @@ GameObject:
   - component: {fileID: 876479930}
   - component: {fileID: 876479932}
   - component: {fileID: 876479931}
+  - component: {fileID: 876479933}
   m_Layer: 9
   m_Name: FenceSideRight (1)
   m_TagString: Wall
@@ -24899,6 +24960,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 876479929}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &876479933
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876479929}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &879623855
 Prefab:
@@ -35660,6 +35735,7 @@ GameObject:
   - component: {fileID: 1323816064}
   - component: {fileID: 1323816066}
   - component: {fileID: 1323816065}
+  - component: {fileID: 1323816067}
   m_Layer: 9
   m_Name: FenceSideRight (6)
   m_TagString: Wall
@@ -35723,6 +35799,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1323816063}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &1323816067
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323816063}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1323972213
 Prefab:
@@ -40041,6 +40131,7 @@ GameObject:
   - component: {fileID: 1478972375}
   - component: {fileID: 1478972377}
   - component: {fileID: 1478972376}
+  - component: {fileID: 1478972378}
   m_Layer: 9
   m_Name: FenceSideRight (9)
   m_TagString: Wall
@@ -40104,6 +40195,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478972374}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &1478972378
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1478972374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1482764711
 Prefab:
@@ -48736,6 +48841,7 @@ GameObject:
   - component: {fileID: 1809593572}
   - component: {fileID: 1809593574}
   - component: {fileID: 1809593573}
+  - component: {fileID: 1809593575}
   m_Layer: 9
   m_Name: FenceSideRight (8)
   m_TagString: Wall
@@ -48799,6 +48905,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1809593571}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &1809593575
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1809593571}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1810439062
 Prefab:
@@ -56309,6 +56429,7 @@ GameObject:
   - component: {fileID: 2090194246}
   - component: {fileID: 2090194248}
   - component: {fileID: 2090194247}
+  - component: {fileID: 2090194249}
   m_Layer: 9
   m_Name: FenceSideRight
   m_TagString: Wall
@@ -56372,6 +56493,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2090194245}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &2090194249
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090194245}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &2090373734
 Prefab:
@@ -56561,6 +56696,7 @@ GameObject:
   - component: {fileID: 2096512407}
   - component: {fileID: 2096512409}
   - component: {fileID: 2096512408}
+  - component: {fileID: 2096512410}
   m_Layer: 9
   m_Name: FenceSideRight (2)
   m_TagString: Wall
@@ -56624,6 +56760,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2096512406}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &2096512410
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2096512406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &2097284379
 Prefab:
