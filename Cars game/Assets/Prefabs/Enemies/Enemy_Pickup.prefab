@@ -803,7 +803,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1673720958961856, guid: 3e21c7f0e29da40469872ef9201955f2,
     type: 2}
   firePoint: {fileID: 4225672914889140}
-  startHP: 100
+  startHP: 125
   healthBar: {fileID: 114356583490862814}
   explosionEffectPrefab: {fileID: 1115786207450146, guid: a48ad18e51caea74a9e32b720c7cf3ca,
     type: 2}
