@@ -2,6 +2,8 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using System.Linq;
 
 public class GameMaster : MonoBehaviour
 {
@@ -11,11 +13,15 @@ public class GameMaster : MonoBehaviour
 
     public GameObject gameOverPanel; // Reference to the Game Over panel.
     public GameObject missionCompletePanel; // Reference to the Mission Complete panel.
-    public TextMeshProUGUI enemiesKilledText; // Reference to the Enemies Killed text.
+    public TextMeshProUGUI gameOverEnemiesKilledText; // Reference to the Enemies Killed text.
+    public TextMeshProUGUI missionCompleteEnemiesKilledText; // Reference to the Enemies Killed text.
     public GameObject explosionEffectPrefab; // Reference to the explosion prefab.
     public CameraFollow camFollow; // Reference to the CameraFollow component on the main camera.
 
     private GameObject player; // Reference to the player.
+
+    public bool isBossBattle;
+    public List<GameObject> bosses;
 
     bool gameFinished = false;
 
@@ -40,7 +46,11 @@ public class GameMaster : MonoBehaviour
 
     void Update()
     {
-        if (enemiesAlive == 0 && !gameFinished)
+        if (enemiesAlive == 0 && !gameFinished && !isBossBattle)
+        {
+            FinishGame();
+            gameFinished = true;
+        } else if (enemiesAlive == 0 && !gameFinished && isBossBattle && !bosses.Any(x => x != null))
         {
             FinishGame();
             gameFinished = true;
@@ -56,6 +66,7 @@ public class GameMaster : MonoBehaviour
         }
 
         missionCompletePanel.SetActive(true);
+        missionCompleteEnemiesKilledText.text = enemiesKilled.ToString(); // Set the enemies killed text to the amount of enemies you've killed.
     }
 
     public void GameOver() // Can be called through the public static instance when the game is over.
@@ -80,7 +91,7 @@ public class GameMaster : MonoBehaviour
 
         Time.timeScale = 0; // Freeze time.
         gameOverPanel.SetActive(true); // Show the Game Over panel.
-        enemiesKilledText.text = enemiesKilled.ToString(); // Set the enemies killed text to the amount of enemies you've killed.
+        gameOverEnemiesKilledText.text = enemiesKilled.ToString(); // Set the enemies killed text to the amount of enemies you've killed.
     }
 
     public void Retry()
