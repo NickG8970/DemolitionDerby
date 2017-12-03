@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public float shootCooldownTime;
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public Transform partRotate;
     public float startHP = 100f;
     public Image healthBar;
     public GameObject explosionEffectPrefab;
@@ -83,10 +84,10 @@ public class Enemy : MonoBehaviour
 
     void LockOntoPlayer()
     {
-        Vector3 lookDir = player.transform.position - transform.position;
+        Vector3 lookDir = player.transform.position - partRotate.position;
         lookDir.y = 0;
         Quaternion rotation = Quaternion.LookRotation(lookDir);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, turnDamping * Time.deltaTime);
+        partRotate.rotation = Quaternion.Slerp(partRotate.rotation, rotation, turnDamping * Time.deltaTime);
     }
 
     IEnumerator WaitForShootCooldown()

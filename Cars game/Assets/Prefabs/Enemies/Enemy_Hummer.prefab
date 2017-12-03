@@ -345,7 +345,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1487563953497130}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 19.59, y: -8.66, z: 20.262573}
+  m_LocalPosition: {x: 20.4093, y: 1.066591, z: 2.7302954}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 4806161405744912}
@@ -1184,6 +1184,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1673720958961856, guid: 3e21c7f0e29da40469872ef9201955f2,
     type: 2}
   firePoint: {fileID: 4225672914889140, guid: 70f35b2936a2be344a793e5aa70138b7, type: 2}
+  partRotate: {fileID: 4115404530191444}
   startHP: 150
   healthBar: {fileID: 114356583490862814, guid: 70f35b2936a2be344a793e5aa70138b7,
     type: 2}
