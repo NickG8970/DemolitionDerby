@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class MissionSelector : MonoBehaviour
 {
@@ -26,6 +25,6 @@ public class MissionSelector : MonoBehaviour
 
     public void BackButtonPressed()
     {
-        SceneManager.LoadScene("Menu");
+        sceneFader.FadeTo("Menu");
     }
 }
