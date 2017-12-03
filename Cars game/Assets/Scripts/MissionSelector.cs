@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MissionSelector : MonoBehaviour
 {
@@ -21,5 +22,10 @@ public class MissionSelector : MonoBehaviour
     public void SelectMission(string missionName)
     {
         sceneFader.FadeTo(missionName);
+    }
+
+    public void BackButtonPressed()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
