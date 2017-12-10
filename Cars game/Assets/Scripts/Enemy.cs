@@ -36,8 +36,17 @@ public class Enemy : MonoBehaviour
 
             if (distToEnemy <= range)
             {
-                LockOntoPlayer();
-                ShootPlayer();
+                Ray ray = new Ray(transform.position, (player.transform.position - transform.position));
+                RaycastHit hit;
+                Debug.DrawRay(transform.position, (player.transform.position - transform.position));
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+                {
+                    if (hit.transform.gameObject == player.gameObject)
+                    {
+                        LockOntoPlayer();
+                        ShootPlayer();
+                    }
+                }
             }
             else
             {
