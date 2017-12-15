@@ -797,7 +797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff8b610a248b1d43bc359391fd220eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 7
+  range: 10
   turnDamping: 3
   shootCooldownTime: 0.3
   bulletPrefab: {fileID: 1673720958961856, guid: 3e21c7f0e29da40469872ef9201955f2,

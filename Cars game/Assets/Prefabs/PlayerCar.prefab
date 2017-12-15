@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4242974155650236}
   - component: {fileID: 33451633452669570}
   - component: {fileID: 23667876785984486}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CCar_01_Wheel_RL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 223795224043372860}
   - component: {fileID: 114639353610306836}
   - component: {fileID: 114785425778272682}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Overhead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 222039222305258794}
   - component: {fileID: 114936194615637508}
   - component: {fileID: 114182694483216132}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 65457389370644860}
   - component: {fileID: 114798378240056000}
   - component: {fileID: 114356238006845988}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: PlayerCar
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4916984500885148}
   - component: {fileID: 33950020515354818}
   - component: {fileID: 23250819634309286}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CCar_01_Wheel_RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 4446912921277994}
   - component: {fileID: 33304235603459356}
   - component: {fileID: 23851838926269200}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CCar_01_Wheel_FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4700761469122404}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 4947893963855994}
   - component: {fileID: 33510772521567916}
   - component: {fileID: 23373825169837058}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CCar_01_Wheel_FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 224605815677057246}
   - component: {fileID: 222141574788420690}
   - component: {fileID: 114681224181644492}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 4695425125038580}
   - component: {fileID: 33164727703358788}
   - component: {fileID: 23830603436949740}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CCar_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,8 +202,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1388938668305070}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3.4872694, y: 0.46, z: 0.48123}
+  m_LocalRotation: {x: 0.0000000019925057, y: -0.517018, z: 0.0000000014820514, w: 0.85597456}
+  m_LocalPosition: {x: -9.454376, y: 0.53357965, z: -2.5714445}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4695425125038580}
