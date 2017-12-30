@@ -41,14 +41,10 @@ public class Enemy : MonoBehaviour
                 Debug.DrawRay(transform.position, (player.transform.position - transform.position));
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity))
                 {
-                    Debug.Log("Raycast success");
-                    Debug.Log(
-                        hit.transform.gameObject.name);
-                    Debug.Log(
-                        player.gameObject.name);
-                    if (hit.transform.root.gameObject == player.gameObject)
+                    Debug.Log(hit.transform.gameObject.name);
+                    Debug.Log(hit.transform.root.name);
+                    if (hit.transform.gameObject == player.gameObject || hit.transform.IsChildOf(player.transform))
                     {
-                        Debug.Log("hit");
                         LockOntoPlayer();
                         ShootPlayer();
                     }

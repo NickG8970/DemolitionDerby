@@ -4,6 +4,12 @@ using UnityEngine;
 public class MenuMaster : MonoBehaviour
 {
     [SerializeField] private SceneFader sceneFader;
+    [SerializeField] private GameObject optionsPanel;
+
+    void Start()
+    {
+        optionsPanel.SetActive(false);
+    }
 
     public void Play()
     {
@@ -12,9 +18,12 @@ public class MenuMaster : MonoBehaviour
 
     public void Options()
     {
-        Debug.Log("WIP");
-        sceneFader.FadeTo("Menu");
-        //sceneFader.FadeTo("Options");
+        optionsPanel.SetActive(true);
+    }
+
+    public void CloseOptions()
+    {
+        optionsPanel.SetActive(false);
     }
 
     public void Exit()
